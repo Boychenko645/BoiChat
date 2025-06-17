@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400" prefWidth="600" style="-fx-background-color: eb2b17;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.example.client.ClientChatController">
+    <children>
+        <ListView fx:id="userListView" layoutX="13.0" layoutY="36.0" prefHeight="330" prefWidth="150" />
+        <ScrollPane fx:id="chatScrollPane" layoutX="170.0" layoutY="35.0" prefHeight="260" prefWidth="420">
+            <content>
+                <VBox fx:id="chatBox" prefHeight="253.0" prefWidth="414.0" spacing="5">
+                  <padding>
+                     <Insets bottom="10" left="10" right="10" top="10" />
+                  </padding>
+                </VBox>
+            </content>
+        </ScrollPane>
+        <TextField fx:id="messageField" layoutX="170.0" layoutY="306.0" prefHeight="60.0" prefWidth="320" promptText="Повідомлення..." />
+        <Button fx:id="sendButton" layoutX="500.0" layoutY="306.0" prefWidth="90" style="-fx-background-color: #000000;" text="Send" textFill="WHITE" />
+        <Button fx:id="backButton" layoutX="500.0" layoutY="360.0" prefWidth="90" style="-fx-background-color: #000000;" text="Back" textFill="WHITE" />
+        <Label fx:id="chatWithLabel" layoutX="170.0" layoutY="6.0" prefHeight="26.0" prefWidth="420.0" text="Чат із: ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="searchField" layoutX="13.0" layoutY="8.0" promptText="Пошук..." />
+
+    </children>
+</AnchorPane>
