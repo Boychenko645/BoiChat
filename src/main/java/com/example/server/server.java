@@ -81,6 +81,11 @@ public class server {
                         break;
                     }
 
+                    // Пропускаємо не-XML повідомлення
+                    if (!line.trim().startsWith("<message>")) {
+                        continue;
+                    }
+
                     Message message = Message.fromXML(line);
 
                     if (message != null && message.receiver != null) {
